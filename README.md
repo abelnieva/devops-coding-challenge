@@ -32,6 +32,8 @@ The terraform apply command is used to apply the changes required to reach the d
 
 #URL endpoints 
 
+you will get ELB endpoint just after run terraform apply
+
 root level (hello World)
 ------------ > version 
 
