@@ -8,7 +8,7 @@ resource "aws_launch_configuration" "example-launchconfig" {
   instance_type   = "t2.micro"
   key_name        = "${aws_key_pair.mykeypair.key_name}"
   security_groups = ["${aws_security_group.service_instance.id}"]
-  user_data       = "#!/bin/bash\napt-get update\napt-get -y install nginx\nMYIP=`ifconfig | grep 'addr:10' | awk '{ print $2 }' | cut -d ':' -f2`\necho 'this is: '$MYIP > /var/www/html/index.html\nsudo service nginx start"
+  user_data       = "${data.template_file.init.rendered}"
 
   lifecycle {
     create_before_destroy = true

@@ -12,9 +12,9 @@ resource "aws_elb" "main-elb" {
 
   health_check {
     healthy_threshold   = 2
-    unhealthy_threshold = 2
+    unhealthy_threshold = 4
     timeout             = 3
-    target              = "HTTP:${var.ELB_port}/${var.healthcheckpath}"
+    target              = "HTTP:${var.ec2_port}/${var.healthcheckpath}"
     interval            = 30
   }
 
