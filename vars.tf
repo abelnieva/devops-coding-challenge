@@ -45,5 +45,5 @@ variable "ELB_port" {
 }
 
 variable "ec2_port" {
-  default = 5000
+  default = 80
 }
