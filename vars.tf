@@ -37,7 +37,7 @@ variable "AMIS" {
 }
 
 variable "healthcheckpath" {
-  default = ""
+  default = "version"
 }
 
 variable "ELB_port" {
