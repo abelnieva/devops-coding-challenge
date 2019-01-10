@@ -3,7 +3,9 @@ DevOps Coding Test
 
 # Architecture overview
 
-Python app published over two tier VPC with ELB in front for high availavility 
+Python app published over multi tier VPC with ELB in front for high availavility  
+![alt text](architecture.png "Architecture")
+
 
 # Prerequisites
 
